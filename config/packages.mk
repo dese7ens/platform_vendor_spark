@@ -4,6 +4,7 @@ PRODUCT_PACKAGES += \
     SparkWallpaperStub \
     SparkThemesStub \
     QuickAccessWallet \
+    TouchGestures \
     wellbeingconf \
     googleconf
 

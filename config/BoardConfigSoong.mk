@@ -31,7 +31,6 @@ SOONG_CONFIG_sparkGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     disable_postrender_cleanup \
-    has_legacy_camera_hal1 \
     has_memfd_backport \
     ignores_ftp_pptp_conntrack_failure \
     needs_netd_direct_connect_rule \
@@ -60,7 +59,6 @@ SOONG_CONFIG_sparkQcomVars += \
     uses_pre_uplink_features_netmgrd \
     uses_qcom_bsp_legacy \
     uses_qti_camera_device \
-    needs_camera_boottime_timestamp
 
 # Only create display_headers_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
 ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
@@ -71,7 +69,6 @@ endif
 # Soong bool variables
 SOONG_CONFIG_sparkGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
 SOONG_CONFIG_sparkGlobalVars_target_uses_prebuilt_dynamic_partitions := $(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)
-SOONG_CONFIG_sparkGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_sparkGlobalVars_ignores_ftp_pptp_conntrack_failure := $(TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE)
 SOONG_CONFIG_sparkGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
 SOONG_CONFIG_sparkGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
@@ -87,7 +84,6 @@ SOONG_CONFIG_sparkQcomVars_supports_hw_fde_perf := $(TARGET_HW_DISK_ENCRYPTION_P
 SOONG_CONFIG_sparkQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_sparkQcomVars_uses_qcom_bsp_legacy := $(TARGET_USES_QCOM_BSP_LEGACY)
 SOONG_CONFIG_sparkQcomVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DEVICE)
-SOONG_CONFIG_sparkQcomVars_needs_camera_boottime_timestamp := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
